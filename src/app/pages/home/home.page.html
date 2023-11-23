@@ -30,9 +30,21 @@
       <ion-item *ngFor="let episodio of episodios">
         <ion-label>
           <h2>{{ episodio.title }}</h2>
-          <p>Episodio: {{ episodio.episode }}</p>
+          <p>Episodio: {{ episodio.id }}</p>
           <!-- Agrega más campos según la estructura de tus datos -->
         </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-button (click)="getTemporada()" >
+      Click me
+      </ion-button>
+    
+     <ion-list *ngIf="showContent">
+      <ion-item *ngFor="let season of seasonsData">
+        
+        
+        {{ season.title }}: {{ season.id }} 
       </ion-item>
     </ion-list>
 
